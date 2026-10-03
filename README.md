@@ -7,7 +7,7 @@ application model and supports multilingual fields through
 The extension is a clean rewrite of the original `dvizh/yii2-seo` concept,
 with these changes:
 
-- `nedarta\\seo` namespace.
+- `nedarta\seo` namespace.
 - PSR-4 autoloading.
 - snake_case database column names.
 - multilingual `title`, `description`, `keywords`, `h1` and `text`.
@@ -74,10 +74,10 @@ Attach `SeoFields` to any ActiveRecord model:
 ```php
 <?php
 
-namespace common\\models;
+namespace common\models;
 
-use nedarta\\seo\\behaviors\\SeoFields;
-use yii\\db\\ActiveRecord;
+use nedarta\seo\behaviors\SeoFields;
+use yii\db\ActiveRecord;
 
 class Product extends ActiveRecord
 {
@@ -98,7 +98,7 @@ The behavior exposes:
 $product->seo
 ```
 
-which returns a `nedarta\\seo\\models\\Seo` model.
+which returns a `nedarta\seo\models\Seo` model.
 
 ## Multilingual SEO
 
@@ -134,8 +134,8 @@ return the values for the current language configured by
 The SEO model contains:
 
 ```php
-use lav45\\translate\\TranslatedBehavior;
-use lav45\\translate\\TranslatedTrait;
+use lav45\translate\TranslatedBehavior;
+use lav45\translate\TranslatedTrait;
 
 class Seo extends ActiveRecord
 {
@@ -169,7 +169,7 @@ In a normal Yii2 form:
 
 <?= $form->field($model, 'name')->textInput() ?>
 
-<?= \\nedarta\\seo\\widgets\\SeoForm::widget([
+<?= \nedarta\seo\widgets\SeoForm::widget([
     'model' => $model,
     'form' => $form,
 ]) ?>
@@ -228,7 +228,7 @@ subclass if your project needs specific fields filled in.
 By default, the extension uses the complete PHP class name:
 
 ```text
-common\\models\\Product
+common\models\Product
 ```
 
 rather than only:
