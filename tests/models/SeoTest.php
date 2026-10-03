@@ -45,7 +45,9 @@ class SeoTest extends TestCase
 
         $attributes = array_merge(
             ...array_map(
-                static fn ($rule) => (array) ($rule[0] ?? []),
+                static function ($rule) {
+                    return (array) ($rule[0] ?? []);
+                },
                 $seo->rules()
             )
         );

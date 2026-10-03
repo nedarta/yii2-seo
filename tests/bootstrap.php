@@ -1,6 +1,7 @@
 <?php
 
 require dirname(__DIR__) . '/vendor/autoload.php';
+require dirname(__DIR__) . '/vendor/yiisoft/yii2/Yii.php';
 require dirname(__DIR__) . '/src/migrations/m260922_120000_create_seo_tables.php';
 
 defined('YII_ENV') or define('YII_ENV', 'test');
